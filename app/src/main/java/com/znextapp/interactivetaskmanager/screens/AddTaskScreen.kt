@@ -9,6 +9,7 @@ import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
@@ -56,7 +57,7 @@ fun AddTaskScreen(
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text("Add Task", color = MaterialTheme.colorScheme.onPrimary) },
+                    title = { Text("Add Task", color = Color.White) },
                     colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = primaryColorHex.fromHex())
                 )
             }
@@ -166,9 +167,9 @@ fun AddTaskScreen(
                         }
                     },
                     modifier = Modifier.fillMaxWidth(),
-                    colors = ButtonDefaults.buttonColors(containerColor = primaryColorHex.fromHex())
+                    colors = ButtonDefaults.buttonColors(containerColor = primaryColorHex.fromHex(), contentColor = Color.White)
                 ) {
-                    Text("Add Task", color = MaterialTheme.colorScheme.onPrimary)
+                    Text("Add Task", color = Color.White)
                 }
 
                 Spacer(modifier = Modifier.height(10.dp))
@@ -176,9 +177,9 @@ fun AddTaskScreen(
                 Button(
                     onClick = { navController.popBackStack() },
                     modifier = Modifier.fillMaxWidth(),
-                    colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error)
+                    colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error,contentColor = Color.White)
                 ) {
-                    Text("Cancel", color = MaterialTheme.colorScheme.onError)
+                    Text("Cancel", color = Color.White)
                 }
             }
         }

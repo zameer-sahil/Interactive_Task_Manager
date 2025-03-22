@@ -68,7 +68,7 @@ fun TaskDetailScreen(
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text("Task Details", color = MaterialTheme.colorScheme.onPrimary) },
+                    title = { Text("Task Details", color = Color.White) },
                     colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = primaryColorHex.fromHex())
                 )
             }
@@ -78,7 +78,6 @@ fun TaskDetailScreen(
                     .fillMaxSize()
                     .padding(paddingValues)
                     .then(if (!removeClip) Modifier.clip(CircleShape) else Modifier) // Remove clip after reveal
-                    .background(Color.White)
                     .size(revealRadius.dp) // Animate size
             ) {
                 Column(
@@ -124,9 +123,10 @@ fun TaskDetailScreen(
                                 navController.popBackStack()
                             }
                         },
+                        colors = ButtonDefaults.buttonColors(containerColor = primaryColorHex.fromHex(),contentColor = Color.White),
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        Text("Update Task")
+                        Text("Update Task", color = Color.White)
                     }
 
                     Spacer(modifier = Modifier.height(10.dp))
@@ -136,10 +136,10 @@ fun TaskDetailScreen(
                             task?.let { viewModel.deleteTask(it) }
                             navController.popBackStack()
                         },
-                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error),
+                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error,contentColor = Color.White),
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        Text("Delete Task")
+                        Text("Delete Task", color = Color.White)
                     }
                 }
             }

@@ -49,7 +49,8 @@ fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel(), navController
                     navController.navigate("task_list") { popUpTo("task_list") { inclusive = true } } // Navigate back
                 },
                 modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(containerColor = primaryColorHex.fromHex())
+                colors = ButtonDefaults.buttonColors(containerColor = primaryColorHex.fromHex(),
+                    contentColor = Color.White)
 
             ) {
                 Text("Apply Theme")
