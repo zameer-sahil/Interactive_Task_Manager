@@ -27,3 +27,12 @@
 
 )
 
+- ####Sample Data Inserts
+INSERT INTO task_table (title, description, priority, dueDate, status)
+VALUES 
+    ('Buy groceries', 'Milk, Bread, Eggs, and Butter', 'High', '2025-04-05', 'Pending'),
+    ('Workout', 'Evening run at the park', 'Medium', '2025-04-06', 'Scheduled'),
+    ('Read book', 'Finish reading the assigned chapter', 'Low', NULL, 'Not Started'),
+    ('Meeting with team', 'Discuss project milestones', 'High', '2025-04-07', 'Scheduled'),
+    ('Call plumber', 'Fix the leaking sink', 'Medium', '2025-04-08', 'Pending');
+
