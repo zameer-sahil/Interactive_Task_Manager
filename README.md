@@ -15,3 +15,15 @@
 - Uses **MVVM + Jetpack Compose** for modern UI.
 - Uses **Room Database** for offline storage.
 - Clean architecture for scalability.
+
+- ## Databse Schema
+- CREATE TABLE IF NOT EXISTS task_table (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    description TEXT NOT NULL,
+    priority TEXT NOT NULL,
+    dueDate TEXT,
+    status TEXT
+
+)
+
